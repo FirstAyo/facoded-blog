@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&family=Inter:wght@400;500&display=swap');
+@import "@flaticon/flaticon-uicons/css/all/all";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* @layer components {
+  * {
+    @apply m-0 p-0 box-border text-base outline-purple duration-100;
+  }
+
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    @apply font-inter font-normal text-black;
+  }
+
+  .hide {
+    @apply opacity-0 pointer-events-none duration-100;
+  }
+
+  .show {
+    @apply opacity-100 pointer-events-auto;
+  }
+} */
