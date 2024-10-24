@@ -58,16 +58,16 @@ function Navbar() {
                         <i className="fi fi-rr-search text-xl"></i>
                     </button>
 
-                    <Link className="hidden lg:flex gap-2 items-center">
+                    <Link className="hidden lg:flex gap-2 items-center bg-gray-50 px-5 py-3 rounded-sm">
                         <i className="fi fi-rr-file-edit"></i>
                         <p>Write</p>
                     </Link>
 
-                    <Link className="hidden bg-transparent text-red-700 border border-red-700 w-20 text-center h-10 lg:flex items-center justify-center font-semibold rounded-md">
+                    <Link className="hidden bg-transparent text-red-700 border border-red-700 px-5 text-center h-10 lg:flex items-center justify-center font-semibold rounded-sm">
                         Sign In
                     </Link>
 
-                    <Link className="bg-red-700 text-white w-20 text-center h-10 hidden lg:flex items-center justify-center font-semibold rounded-md">
+                    <Link className="bg-red-700 text-white px-5 text-center h-10 hidden lg:flex items-center justify-center font-semibold rounded-sm">
                         Sign Up
                     </Link>
 
