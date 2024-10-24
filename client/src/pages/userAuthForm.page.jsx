@@ -5,12 +5,12 @@ import InputBox from '../components/input.component'
 
 function UserAuthForm({ type }) {
     return (
-        <section>
+        <section className='h-cover flex items-center justify-center'>
 
-            <form action="">
+            <form action="" className='w-[80%] max-w-[400px] mx-auto'>
 
-                <h1 className=''>
-                    {type == 'sign-in' ? "Welcome back" : "Join us today"}
+                <h1 className='text-4xl font-gelasio capitalize text-center my-24'>
+                    {type == 'sign-in' ? "Welcome back" : "Join me today"}
                 </h1>
 
                 {
@@ -37,6 +37,13 @@ function UserAuthForm({ type }) {
                     placeholder="password"
                     icon="fi-rr-key"
                 />
+
+                <button
+                className='btn-dark center mt-14'
+                type='submit'
+                >
+                    {type == 'sign-in' ? "Sign in" : "Sign up"}
+                </button>
 
             </form>
         </section>

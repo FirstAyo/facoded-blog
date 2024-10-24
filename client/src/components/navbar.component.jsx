@@ -44,11 +44,11 @@ function Navbar() {
                             <p>Write</p>
                         </Link>
 
-                        <Link className="flex-1 lg:hidden bg-transparent text-red-700 border border-red-700 px-5 text-center py-2 flex items-center justify-center font-semibold rounded-sm">
+                        <Link to='/signin' className="flex-1 lg:hidden bg-transparent text-red-700 border border-red-700 px-5 text-center py-2 flex items-center justify-center font-semibold rounded-sm">
                             Sign In
                         </Link>
 
-                        <Link className="flex-1 bg-dark-grey text-white px-5 text-center py-2 lg:hidden flex items-center justify-center font-semibold rounded-sm">
+                        <Link to='/signup' className="flex-1 bg-dark-grey text-white px-5 text-center py-2 lg:hidden flex items-center justify-center font-semibold rounded-sm">
                             Sign Up
                         </Link>
                     </div>
