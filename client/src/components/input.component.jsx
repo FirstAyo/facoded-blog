@@ -16,6 +16,8 @@ function InputBox({ name, type, id, value, placeholder, icon }) {
                 className="input-box"
             />
 
+            <i className={"fi " + icon + " input-icon"}></i>
+
         </div>
     )
 }

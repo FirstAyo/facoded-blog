@@ -19,7 +19,7 @@ function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        
+
         <div className="py-2 w-[90%] mx-auto font-gelasio">
 
             <nav className="flex items-center justify-between">
@@ -30,7 +30,7 @@ function Navbar() {
 
 
 
-                <div className={"absolute flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[69px]" : "top-[-100%]")}>
+                <div className={"absolute flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[60px]" : "top-[-100%]")}>
 
                     {menuItem.menuLists.map((menuList, index) =>
                         <div key={index} className="flex">
@@ -39,7 +39,7 @@ function Navbar() {
 
                     )}
                     <div className="lg:hidden flex items-center px-3 py-2 border-t gap-5">
-                        <Link className="flex-1 lg:hidden flex gap-2 items-center bg-gray-50 px-5 py-3 rounded-sm">
+                        <Link className="flex-1 lg:hidden flex gap-2 items-center bg-grey px-5 py-3 rounded-sm">
                             <i className="fi fi-rr-file-edit"></i>
                             <p>Write</p>
                         </Link>
@@ -48,7 +48,7 @@ function Navbar() {
                             Sign In
                         </Link>
 
-                        <Link className="flex-1 bg-red-700 text-white px-5 text-center py-2 lg:hidden flex items-center justify-center font-semibold rounded-sm">
+                        <Link className="flex-1 bg-dark-grey text-white px-5 text-center py-2 lg:hidden flex items-center justify-center font-semibold rounded-sm">
                             Sign Up
                         </Link>
                     </div>
@@ -73,7 +73,7 @@ function Navbar() {
                         <i className="fi fi-rr-search text-xl"></i>
                     </button>
 
-                    <Link className="hidden lg:flex gap-2 items-center bg-gray-50 px-5 py-3 rounded-sm">
+                    <Link className="hidden lg:flex gap-2 items-center bg-grey px-5 py-3 rounded-sm">
                         <i className="fi fi-rr-file-edit"></i>
                         <p>Write</p>
                     </Link>
@@ -82,7 +82,7 @@ function Navbar() {
                         Sign In
                     </Link>
 
-                    <Link to='/signup' className="bg-red-700 text-white px-5 text-center h-10 hidden lg:flex items-center justify-center font-semibold rounded-sm">
+                    <Link to='/signup' className="bg-dark-grey text-white px-5 text-center h-10 hidden lg:flex items-center justify-center font-semibold rounded-sm">
                         Sign Up
                     </Link>
 
