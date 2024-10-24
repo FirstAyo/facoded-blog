@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import logo from "../imgs/logo-transparent.svg";
 import { useState } from "react";
 
@@ -19,6 +19,7 @@ function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
+        
         <div className="py-2 w-[90%] mx-auto font-gelasio">
 
             <nav className="flex items-center justify-between">
@@ -32,7 +33,7 @@ function Navbar() {
                 <div className={"absolute flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[69px]" : "top-[-100%]")}>
 
                     {menuItem.menuLists.map((menuList, index) =>
-                        <div key={ index } className="flex">
+                        <div key={index} className="flex">
                             <Link to={menuList.url} className="px-3 py-3 lg:py-5">{menuList.name}</Link>
                         </div>
 
@@ -77,11 +78,11 @@ function Navbar() {
                         <p>Write</p>
                     </Link>
 
-                    <Link className="hidden bg-transparent text-red-700 border border-red-700 px-5 text-center h-10 lg:flex items-center justify-center font-semibold rounded-sm">
+                    <Link to='/signin' className="hidden bg-transparent text-red-700 border border-red-700 px-5 text-center h-10 lg:flex items-center justify-center font-semibold rounded-sm">
                         Sign In
                     </Link>
 
-                    <Link className="bg-red-700 text-white px-5 text-center h-10 hidden lg:flex items-center justify-center font-semibold rounded-sm">
+                    <Link to='/signup' className="bg-red-700 text-white px-5 text-center h-10 hidden lg:flex items-center justify-center font-semibold rounded-sm">
                         Sign Up
                     </Link>
 
@@ -90,6 +91,8 @@ function Navbar() {
                     </button>
                 </div>
             </nav>
+
+            <Outlet />
 
         </div>
     )
