@@ -5,6 +5,16 @@ import { useState } from "react";
 
 function Navbar() {
 
+    const menuItem = {
+
+        menuLists: [
+            { name: "Home", url: "/" },
+            { name: "My Projects", url: "/" },
+            { name: "About Me", url: "/" },
+            { name: "Contact Me", url: "/" }
+        ]
+    }
+
     const [searchBoxVisible, setSearchBoxVisible] = useState(false);
     const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -17,12 +27,16 @@ function Navbar() {
                     <img src={logo} alt="Logo" className="w-28 h-12" />
                 </Link>
 
-                <div className={"absolute flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[69px]" : "top-[-100%]")}>
-                    <Link to="/" className="px-3 py-3 lg:py-5">Home</Link>
-                    <Link to="/" className="px-3 py-3 lg:py-5">My Projects</Link>
-                    <Link to="/" className="px-3 py-3 lg:py-5">About Me</Link>
-                    <Link to="/" className="px-3 py-3 lg:py-5">Contact Me</Link>
 
+
+                <div className={"absolute flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[69px]" : "top-[-100%]")}>
+
+                    {menuItem.menuLists.map((menuList, index) =>
+                        <div key={ index } className="flex">
+                            <Link to={menuList.url} className="px-3 py-3 lg:py-5">{menuList.name}</Link>
+                        </div>
+
+                    )}
                     <div className="lg:hidden flex items-center px-3 py-2 border-t gap-5">
                         <Link className="flex-1 lg:hidden flex gap-2 items-center bg-gray-50 px-5 py-3 rounded-sm">
                             <i className="fi fi-rr-file-edit"></i>
