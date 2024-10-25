@@ -1,4 +1,3 @@
-import React from 'react'
 import InputBox from '../components/input.component';
 import googleIcon from '../imgs/google.png';
 import { Link } from 'react-router-dom';
