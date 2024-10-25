@@ -20,7 +20,7 @@ function Navbar() {
 
     return (
 
-        <div className="py-2 w-[90%] mx-auto font-gelasio">
+        <div className="py-4 w-[90%] mx-auto font-gelasio">
 
             <nav className="flex items-center justify-between">
 
@@ -34,7 +34,7 @@ function Navbar() {
 
                     {menuItem.menuLists.map((menuList, index) =>
                         <div key={index} className="flex">
-                            <Link to={menuList.url} className="px-3 py-3 lg:py-5">{menuList.name}</Link>
+                            <Link to={menuList.url} className="px-3 py-3 lg:py-5 text-lg">{menuList.name}</Link>
                         </div>
 
                     )}

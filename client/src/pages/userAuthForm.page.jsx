@@ -40,8 +40,8 @@ function UserAuthForm({ type }) {
                 />
 
                 <button
-                className='btn-dark center mt-14 block mx-auto'
-                type='submit'
+                    className='btn-dark center mt-14 block mx-auto'
+                    type='submit'
                 >
                     {type == 'sign-in' ? "Sign in" : "Sign up"}
                 </button>
@@ -53,21 +53,26 @@ function UserAuthForm({ type }) {
                 </div>
 
                 <button className='btn-dark flex items-center justify-center gap-4 w-[90%] mx-auto'>
-                    <img src={ googleIcon } alt="" className='w-5' />
+                    <img src={googleIcon} alt="" className='w-5' />
                     Connect With Google
                 </button>
 
                 {
                     type == "sign-in" ?
-                    <div className='flex w-[90%] mx-auto items-center justify-center gap-2 my-5'>
-                        <p className=' text-xl'>Do not have an account?</p>
-                        <Link to='/signup' className='underline text-xl'>Join us today</Link>
-                    </div>
-                    :
-                    <div className='flex w-[90%] mx-auto items-center justify-center gap-2 my-5'>
-                        <p className=' text-xl'>Already a member?</p>
-                        <Link to='/signin' className='underline text-xl'>Sign in here</Link>
-                    </div>
+
+                        <p className=' text-xl text-center my-6'>
+                            Do not have an account?
+                            <Link to='/signup' className='underline text-xl ml-1'>Join us today</Link>
+                        </p>
+
+                        :
+
+                        <p className=' text-xl text-center my-6'>
+                            Already a member?
+                            <Link to='/signin' className='underline text-xl ml-1'>Sign in here</Link>
+                        </p>
+
+
                 }
 
             </form>
