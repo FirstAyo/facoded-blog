@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function InputBox({ name, type, id, value, placeholder, icon }) {
 
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     return (
-        <div>
+        <div className="relative w-[100%] mb-4">
 
             <input
                 name={name}
-                type="text"
+                type={ type == "password" ? passwordVisible ? "text" : "password" : type}
                 placeholder={placeholder}
                 defaultValue={value}
                 id={id}
@@ -18,8 +19,25 @@ function InputBox({ name, type, id, value, placeholder, icon }) {
 
             <i className={"fi " + icon + " input-icon"}></i>
 
+            {
+                type == "password" ?
+                <i className={"fi fi-rr-eye" + (!passwordVisible ? "-crossed" : "") + " input-icon left-[auto] right-4 cursor-pointer"} 
+                onClick={() => setPasswordVisible(currentVal => !currentVal)}
+                ></i>
+                :""
+            }
+
         </div>
     )
+}
+
+InputBox.propTypes = {
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    value: PropTypes.string,
+    placeholder: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
 }
 
 export default InputBox
