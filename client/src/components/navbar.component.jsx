@@ -30,7 +30,7 @@ function Navbar() {
 
 
 
-                <div className={"absolute flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[60px]" : "top-[-100%]")}>
+                <div className={"absolute bg-white/90 flex flex-col top-[-100%] w-[90%] border lg:flex-row lg:border-none lg:top-0 lg:w-[35%] gap-2 py-2 lg:py-0 lg:relative " + (toggleMenu ? "top-[75px] z-10" : "top-[-100%]")}>
 
                     {menuItem.menuLists.map((menuList, index) =>
                         <div key={index} className="flex">
